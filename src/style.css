@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'consolata';
+    src: url('fonts/Inconsolata/static/Inconsolata-ExtraLight.ttf') format('truetype'),
+         url('fonts/Inconsolata/static/Inconsolata-Regular.ttf') format('truetype'),
+         url('fonts/Inconsolata/static/Inconsolata-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Playfair';
+    src: url('fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf') format('truetype'),
+         url('fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Yesteryear';
+    src: url('fonts/Yesteryear/Yesteryear-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Sans';
+    src: url('fonts/open-sans-condensed/OpenSans-CondBold.ttf') format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    appearance: none;
+    box-sizing: border-box;
+    letter-spacing: normal;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 15vh;
+    padding:3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+}
+
+nav .name {
+    text-align: center;
+}
+
+nav h1 {
+    font-family: 'consolata';
+    font-weight: 700;
+    font-size: 3rem;
+    color: black;
+    letter-spacing: 1.3px;
+}
+
+nav h3{
+    font-family: 'Playfair'; 
+    font-weight: 500;
+    font-size: 1rem;
+    color: black;
+}
+
+nav .links {
+    display: flex;
+    gap: 5rem;
+}
+
+nav .links a {
+    font-size: 1.6rem;
+    font-family: 'Playfair';
+    font-weight: 700;
+    color: rgb(146, 145, 145); 
+    transition: transform 300ms ease;   
+}
+
+nav .links a:hover {
+    color: rgb(235, 80, 88);  
+    transform: translateY(-15%);  
+}
+
+nav .links a.active {
+    color: rgb(235, 80, 88);   
+}
+
+/* --------------SECTION HOME-------------- */
+section.home {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    background: url('./img/home.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    padding-top: 22rem;
+}
+
+.home h1 {
+    font-size: 5rem;
+    font-family: 'Sans';
+    line-height: 60px;
+}
+
+.home p,
+.menu .recommend p,
+.about .story p:first-child {
+    font-family: 'Yesteryear';
+    font-size: 3.7rem;
+    line-height: 52px;
+}
+
+.home p:last-child {
+    font-family: 'Playfair';
+    font-size: 1.6rem;
+    font-weight: 700;
+
+}
+
+/* --------------MENU-------------- */
+section.menu {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 200px 200px auto;
+    justify-items: center;
+}
+
+.menu .image {
+    background: url('./img/menu.png');
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .image h1,
+.about .image h1,
+.menu .recommend h1,
+.about .story h1 {
+    font-family: 'Sans';
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+.menu .recommend h1,
+.about .story h1 {
+    font-size: 45px;
+    line-height:52px;
+}
+
+.menu .recommend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu .chef-menu {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.menu .chef-menu .items {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.menu .chef-menu .items .item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20rem;
+}
+
+.menu .chef-menu .items .item p {
+    font-family: 'Playfair';
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 41px;
+}
+
+.menu .chef-menu .items .item p:last-child {
+    color: rgb(158, 158, 158);    
+}
+
+/* --------------ABOUT-------------- */
+section.about {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 300px 1fr 1fr;
+}
+
+.about .image {
+    background: url('./img/about-top.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.about .image h1{
+    color: #fff;
+}
+
+.about .meal-photo {  
+    padding-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.about .story {
+    padding: 8rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about .story p:last-child {
+    max-width: 1000px;
+    text-align: center;   
+    font-family: 'Playfair'; 
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    color: rgb(158, 158, 158);
+}
