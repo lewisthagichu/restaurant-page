@@ -115,6 +115,7 @@ section.home {
     font-size: 5rem;
     font-family: 'Sans';
     line-height: 60px;
+    text-align: center;
 }
 
 .home p,
@@ -178,6 +179,7 @@ section.menu {
     gap: 4rem;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0 2rem;
     padding-bottom: 3rem;
 }
 
@@ -224,6 +226,7 @@ section.about {
 
 .about .image h1{
     color: #fff;
+    text-align: center;
 }
 
 .about .meal-photo {  
@@ -242,6 +245,10 @@ section.about {
     gap: 4rem;
 }
 
+.about .story h1 {
+    text-align: center;
+}
+
 .about .story p:last-child {
     max-width: 1000px;
     text-align: center;   
@@ -251,3 +258,6 @@ section.about {
     font-weight: 700;
     color: rgb(158, 158, 158);
 }
+
+
+

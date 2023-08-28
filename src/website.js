@@ -1,6 +1,7 @@
 import "./style.css";
 import loadHome from "./home";
 import loadMenu from "./menu";
+import loadAbout from "./about";
 
 function createNav() {
   const nav = document.createElement("nav");
@@ -46,6 +47,7 @@ function createNav() {
   about.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
     setActivePage(about);
+    loadAbout();
   });
 
   return nav;
