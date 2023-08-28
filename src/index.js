@@ -1,3 +1,3 @@
-import createNav from "./website";
+import initializeWebsite from "./website";
 
-document.body.appendChild(createNav());
+initializeWebsite();

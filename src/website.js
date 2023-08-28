@@ -1,6 +1,8 @@
 import "./style.css";
+import loadHome from "./home";
+import loadMenu from "./menu";
 
-export default function createNav() {
+function createNav() {
   const nav = document.createElement("nav");
 
   const name = document.createElement("div");
@@ -16,24 +18,10 @@ export default function createNav() {
   const home = document.createElement("a");
   home.textContent = "Home";
   home.classList.add("active");
-  home.addEventListener("click", (e) => {
-    if (e.target.classList.contains("active")) return;
-    setActivePage(home);
-  });
-
   const menu = document.createElement("a");
   menu.textContent = "Menu";
-  menu.addEventListener("click", (e) => {
-    if (e.target.classList.contains("active")) return;
-    setActivePage(menu);
-  });
-
   const about = document.createElement("a");
   about.textContent = "About";
-  about.addEventListener("click", (e) => {
-    if (e.target.classList.contains("active")) return;
-    setActivePage(about);
-  });
 
   name.appendChild(heading1);
   name.appendChild(heading3);
@@ -42,6 +30,23 @@ export default function createNav() {
   links.appendChild(about);
   nav.appendChild(name);
   nav.appendChild(links);
+
+  home.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    setActivePage(home);
+    loadHome();
+  });
+
+  menu.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    setActivePage(menu);
+    loadMenu();
+  });
+
+  about.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    setActivePage(about);
+  });
 
   return nav;
 }
@@ -57,3 +62,22 @@ function setActivePage(tag) {
 
   tag.classList.add("active");
 }
+
+function createMain() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+  main.setAttribute("id", "main");
+  return main;
+}
+
+function initializeWebsite() {
+  const body = document.querySelector("body");
+
+  body.appendChild(createNav());
+  body.appendChild(createMain());
+
+  setActivePage(document.querySelector("nav a"));
+  loadHome();
+}
+
+export default initializeWebsite;

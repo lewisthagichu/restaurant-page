@@ -3,9 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: {
-    bundle: path.resolve(__dirname, "src/index.js"),
-  },
+  entry: "./src/index.js",
   devtool: "inline-source-map",
   devServer: {
     static: {
@@ -22,7 +20,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Development",
+      title: "Magnolia Restaurant",
     }),
   ],
   output: {
