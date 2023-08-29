@@ -7,10 +7,10 @@ This project involves creating a dynamic restaurant homepage using JavaScript to
 The project is part of [The Odin Project](https://www.theodinproject.com/)<br />
 
 # Features
-Dynamic rendering of restaurant homepage content using JavaScript.
-Engaging user interface with interactive elements.
-Stylish and responsive design for various screen sizes.
-Bundling of files using webpack for efficient deployment.  
+* Dynamic rendering of restaurant homepage content using JavaScript.
+* Engaging user interface with interactive elements.
+* Stylish and responsive design for various screen sizes.
+* Bundling of files using webpack for efficient deployment.  
 
 # Technologies Used
 * HTML, CSS, and JavaScript for creating the webpage and implementing interactivity.
