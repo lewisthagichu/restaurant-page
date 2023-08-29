@@ -1,5 +1,5 @@
 ## LIVE LINK ##
-Link: https://lewisthagichu.github.io/tik-tac-toe/
+Link: https://lewisthagichu.github.io/restaurant-page/
 
 
 # Restaurant-page  
